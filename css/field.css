@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "TetrisBlocks-P99g";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../font/TetrisBlocks-P99g.ttf);
+}
+#title {
+  position: relative;
+  color: #5588ff;
+  text-align: center;
+  font: 1.4rem "TetrisBlocks-P99g";
+  margin: 0 0 20px 0;
+  filter: drop-shadow(0 0 10px #5588ff);
+  user-select: none;
+}
+#title:hover {
+  filter: drop-shadow(0 0 20px #5588ff) brightness(130%);
+}
+
+.field-wrapper {
+  margin: 5vh auto 0 auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+#field {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background: #000000de;
+  box-shadow: 0 0 15px #ff2e2e;
+  border: 3px solid #ff2e2e;
+  border-radius: 5px;
+  padding: 3px;
+  color: #f6ff68;
+  font: bold 15px Arial;
+  cursor: cell;
+}
+#field:hover {
+  box-shadow: 0 0 20px #ff2e2e;
+}
+
+.row {
+  display: flex;
+  flex: 100%;
+}
+.row:nth-last-of-type(-n+2) {
+  display: none;
+}
+.row:first-of-type .cell {
+  border-top: 1px solid #202020;
+}
+
+.cleared {
+  display: none;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: 0.2s all;
+}
+.cell:not(last-of-type) {
+  border-right: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+}
+.cell:nth-of-type(3) {
+  border-left: 1px solid #202020;
+}
+.cell:nth-of-type(-n+2), .cell:nth-last-of-type(-n+2) {
+  display: none;
+}
+
+.--active:hover {
+  filter: brightness(150%);
+  border-color: #ebebeb;
+}
+
+.orange {
+  background: radial-gradient(closest-side, #854000, #ff9e1e);
+  box-shadow: 0 0 7px #ff9100;
+}
+.orange:hover {
+  box-shadow: 0 0 20px #ff9100;
+}
+
+.turquoise {
+  background: radial-gradient(closest-side, #008674, #1dd2ff);
+  box-shadow: 0 0 7px #00ccff;
+}
+.turquoise:hover {
+  box-shadow: 0 0 20px #00ccff;
+}
+
+.yellow {
+  background: radial-gradient(closest-side, #8a8a00, #fbff24);
+  box-shadow: 0 0 7px #fbff00;
+}
+.yellow:hover {
+  box-shadow: 0 0 20px #fbff00;
+}
+
+.red {
+  background: radial-gradient(closest-side, #880000, #ff1e1e);
+  box-shadow: 0 0 7px #ff0000;
+}
+.red:hover {
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.blue {
+  background: radial-gradient(closest-side, #003e85, #1783ff);
+  box-shadow: 0 0 7px #0077ff;
+}
+.blue:hover {
+  box-shadow: 0 0 20px #0077ff;
+}
+
+.green {
+  background: radial-gradient(closest-side, #008f2b, #1fff62);
+  box-shadow: 0 0 7px #00ff4c;
+}
+.green:hover {
+  box-shadow: 0 0 20px #00ff4c;
+}
+
+.pink {
+  background: radial-gradient(closest-side, #620080, #b81fff);
+  box-shadow: 0 0 7px #ae00ff;
+}
+.pink:hover {
+  box-shadow: 0 0 20px #ae00ff;
+}
+
+.--inactive {
+  /* display: none */
+  background: rgba(255, 255, 255, 0.63);
+}

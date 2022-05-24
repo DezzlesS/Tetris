@@ -1,0 +1,11 @@
+//- - import size from '../js/input.js'
+- const size = {width: 10, height: 20}
+
+.field-wrapper
+    h1#title Tetris   
+    #field
+        - for (let i = 0; i < size.height +2; i++)
+            .row(data-index=i)
+                - for (let n = 0; n < size.width+4; n++)
+                    .cell(data-index=n-2 data-row=i)
+    
